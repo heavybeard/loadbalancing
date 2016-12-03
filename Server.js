@@ -56,3 +56,13 @@ Server.prototype.requestsCompleted = function (request) {
 
     return this.__requests.completed;
 };
+
+/**
+ * Reduce the duration of request on progress
+ *
+ * @public
+ * @return {void}
+ */
+Server.prototype.reduceDuration = function () {
+    this.__requests.onProgress.duration--; 
+};
